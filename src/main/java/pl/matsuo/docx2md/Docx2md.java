@@ -134,8 +134,6 @@ public class Docx2md {
         throw new RuntimeException(e);
       }
     });
-
-    System.out.println("Ok!");
   }
 
 
