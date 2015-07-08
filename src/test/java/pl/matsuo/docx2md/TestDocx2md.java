@@ -1,6 +1,5 @@
 package pl.matsuo.docx2md;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.internal.util.io.IOUtil;
 
@@ -10,6 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by marek on 08.07.15.
@@ -25,6 +26,6 @@ public class TestDocx2md {
     Collection<String> expected = IOUtil.readLines(getClass().getResourceAsStream("/test_file.md"));
     Collection<String> result = IOUtil.readLines(new FileInputStream(new File("target/testDock2md.md")));
 
-    Assert.assertEquals(expected, result);
+    assertEquals(expected, result);
   }
 }
