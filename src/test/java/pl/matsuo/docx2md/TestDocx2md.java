@@ -28,4 +28,12 @@ public class TestDocx2md {
 
     assertEquals(expected, result);
   }
+
+
+  @Test
+  public void testDocx2mdMain() throws Exception {
+    Docx2md.main(new String[] {
+        "src/test/resources/test_file.docx"
+    });
+  }
 }
